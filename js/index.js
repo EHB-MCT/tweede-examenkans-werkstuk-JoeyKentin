@@ -15,3 +15,9 @@ postData('https://thecrew.cc/news/read.php')
     .catch((error) => {
         console.log(new Error(error));
     });
+
+class Articles {
+    function like() {
+        
+    }
+}
