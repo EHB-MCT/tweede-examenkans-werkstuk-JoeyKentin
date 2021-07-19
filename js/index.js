@@ -20,6 +20,9 @@ class Articles {
     }   
     
     like() {
-        
+        let ID = {
+            "UUID": []
+        };
+
     }
 } 
