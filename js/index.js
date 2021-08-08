@@ -21,10 +21,8 @@ class Articles {
         
             return response.json();
         }
-
         return postData('https://thecrew.cc/news/read.php')
             .then(data => {
-
 				return data.news.map(element => {
 					return new Article(element);
 				});
@@ -55,4 +53,19 @@ class Articles {
             });
     }
 }
+
+const articles = new Articles();
+console.log(articles.Render());
+let articleList = [];
+let originalArticleList = [];
+let sort = 'desc';
+articles.Render().then(
+	data => {
+		originalArticleList = data;
+		articleList = data;
+		sortLikes();
+		console.log(data);
+		renderList(data);		
+	}
+);
 
